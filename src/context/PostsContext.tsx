@@ -25,7 +25,7 @@ interface PostsContextType {
   posts: IPost[]
   fetchPosts: (query?: string) => Promise<void>
   getPost: (url: string) => Promise<void>
-  postDetail: any | undefined
+  postDetail: IPost | undefined
   user: IUser | undefined
 }
 

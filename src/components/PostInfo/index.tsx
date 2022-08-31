@@ -1,5 +1,5 @@
-import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'use-context-selector'
 import { PostsContext } from '../../context/PostsContext'
 import { dateFormatFromNow } from '../../utils/dateFormat'
 import {
@@ -38,7 +38,7 @@ export function PostInfo() {
         </li>
 
         <li>
-          <CalendarIcon /> {dateFormatFromNow(postDetail?.created_at!!)}
+          <CalendarIcon /> {dateFormatFromNow(String(postDetail?.created_at))}
         </li>
 
         <li>

@@ -3,6 +3,7 @@ import { useContext } from 'use-context-selector'
 import { PostsContext } from '../../../../context/PostsContext'
 import { dateFormatFromNow } from '../../../../utils/dateFormat'
 import { RepoCard, RepoListContainer } from './styles'
+import ReactMarkdown from 'react-markdown'
 
 export function RepoList() {
   const { posts, getPost } = useContext(PostsContext)
@@ -28,7 +29,10 @@ export function RepoList() {
                 <p>{dateFormatFromNow(post.created_at)}</p>
               </div>
 
-              <span>{post.body}</span>
+              <ReactMarkdown
+                // eslint-disable-next-line react/no-children-prop
+                children={String(post.body)}
+              />
             </RepoCard>
           )
         })

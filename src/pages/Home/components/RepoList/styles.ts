@@ -45,7 +45,8 @@ export const RepoCard = styled.button`
     }
   }
 
-  span {
+  blockquote {
+    text-align: left;
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
