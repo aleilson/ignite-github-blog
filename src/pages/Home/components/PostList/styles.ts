@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const RepoListContainer = styled.div`
+export const PostListContainer = styled.div`
   width: 100%;
   margin-top: 3rem;
 
@@ -11,7 +11,7 @@ export const RepoListContainer = styled.div`
   gap: 2rem;
 `
 
-export const RepoCard = styled.button`
+export const PostCard = styled.button`
   width: 26rem;
   padding: 2rem;
   border-radius: 0.375rem;

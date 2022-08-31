@@ -1,5 +1,5 @@
 import { Header } from '../../components/Header'
-import { RepoList } from './components/RepoList'
+import { PostList } from './components/PostList'
 import { SearchContent } from './components/SearchContent'
 import { HomeContainer } from './styles'
 
@@ -9,7 +9,7 @@ export function Home() {
       <Header />
       <HomeContainer>
         <SearchContent />
-        <RepoList />
+        <PostList />
       </HomeContainer>
     </>
   )

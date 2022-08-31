@@ -2,10 +2,10 @@ import { useNavigate } from 'react-router-dom'
 import { useContext } from 'use-context-selector'
 import { PostsContext } from '../../../../context/PostsContext'
 import { dateFormatFromNow } from '../../../../utils/dateFormat'
-import { RepoCard, RepoListContainer } from './styles'
+import { PostListContainer, PostCard } from './styles'
 import ReactMarkdown from 'react-markdown'
 
-export function RepoList() {
+export function PostList() {
   const { posts, getPost } = useContext(PostsContext)
   const navigate = useNavigate()
 
@@ -16,11 +16,11 @@ export function RepoList() {
   }
 
   return (
-    <RepoListContainer>
+    <PostListContainer>
       {posts ? (
         posts.map((post) => {
           return (
-            <RepoCard
+            <PostCard
               key={post.title}
               onClick={() => handleGetPostDetail(String(post.number))}
             >
@@ -33,12 +33,12 @@ export function RepoList() {
                 // eslint-disable-next-line react/no-children-prop
                 children={String(post.body)}
               />
-            </RepoCard>
+            </PostCard>
           )
         })
       ) : (
         <strong>Nenhum post para listar </strong>
       )}
-    </RepoListContainer>
+    </PostListContainer>
   )
 }
